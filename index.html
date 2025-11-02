@@ -705,10 +705,14 @@
             <div class="contact-shell">
               <div class="prompt-line" style="margin-bottom:14px; flex-direction: column; gap: 6px;">
                 <div class="prompt">C:\Users\Contact&gt;</div>
-                <div style="color:var(--text); font-size:0.94rem;">Get in touch — naivi24@gmail.com</div>
+                <div style="color:var(--text); font-size:0.94rem;">Get in touch — 
+                  <br>
+                    naivedya.pandey@gmail.com 
+                  <br>
+                  naivi24@gmail.com</div>
               </div>
 
-              <form id="contactForm" novalidate>
+              <!-- <form id="contactForm" novalidate>
                 <div class="input-line">
                   <div class="prompt">Name</div>
                   <div style="width:100%; position:relative;">
@@ -745,7 +749,7 @@
                   <button id="sendBtn" class="btn-ghost w-100 w-md-auto" type="submit">send /submit</button>
                   <div id="sendStatus" style="color:var(--muted-green); font-size:0.9rem;"></div>
                 </div>
-              </form>
+              </form> -->
             </div>
           </div>
         </div>
@@ -861,28 +865,28 @@
         }
       });
 
-      $("#contactForm").validate({
-        rules: {
-          name: { required: true, minlength: 2 },
-          email: { required: true, email: true },
-          message: { required: true, minlength: 10 }
-        },
-        messages: {
-          name: { required: "enter name", minlength: "min 2 chars" },
-          email: { required: "enter email", email: "valid email pls" },
-          message: { required: "write message", minlength: "min 10 chars" }
-        },
-        submitHandler: function(form) {
-          const status = $('#sendStatus');
-          status.text('sending...').css('color', 'var(--green)');
-          setTimeout(() => {
-            status.html('message sent — thank you!').css('color', '#7effa0');
-            form.reset();
-            $(form).find('input, textarea').removeClass('valid error');
-            setTimeout(() => status.text(''), 3000);
-          }, 1200);
-        }
-      });
+      // $("#contactForm").validate({
+      //   rules: {
+      //     name: { required: true, minlength: 2 },
+      //     email: { required: true, email: true },
+      //     message: { required: true, minlength: 10 }
+      //   },
+      //   messages: {
+      //     name: { required: "enter name", minlength: "min 2 chars" },
+      //     email: { required: "enter email", email: "valid email pls" },
+      //     message: { required: "write message", minlength: "min 10 chars" }
+      //   },
+      //   submitHandler: function(form) {
+      //     const status = $('#sendStatus');
+      //     status.text('sending...').css('color', 'var(--green)');
+      //     setTimeout(() => {
+      //       status.html('message sent — thank you!').css('color', '#7effa0');
+      //       form.reset();
+      //       $(form).find('input, textarea').removeClass('valid error');
+      //       setTimeout(() => status.text(''), 3000);
+      //     }, 1200);
+      //   }
+      // });
     });
 
     /* Nav Scroll */
